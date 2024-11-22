@@ -1,0 +1,8 @@
+server:
+  port: 8103
+  servlet:
+    context-path: /api
+efast-api:
+  client:
+    access-key: qisande
+    secret-key: abcdefgh
