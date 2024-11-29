@@ -198,6 +198,13 @@ public class InterfaceInfoController {
         return ResultUtils.success(interfaceInfoPage);
     }
 
+    /**
+     * 发布接口
+     *
+     * @param idRequest
+     * @param request
+     * @return
+     */
     @AuthCheck(mustRole = "admin")
     @PostMapping("/online")
     public BaseResponse<Boolean> onlineInterfaceInfo(@RequestBody IdRequest idRequest,
@@ -222,6 +229,13 @@ public class InterfaceInfoController {
         return ResultUtils.success(result);
     }
 
+    /**
+     * 下线接口
+     *
+     * @param idRequest
+     * @param request
+     * @return
+     */
     @AuthCheck(mustRole = "admin")
     @PostMapping("/offline")
     public BaseResponse<Boolean> offlineInterfaceInfo(@RequestBody IdRequest idRequest,
@@ -240,6 +254,13 @@ public class InterfaceInfoController {
         return ResultUtils.success(result);
     }
 
+    /**
+     * 调用接口
+     *
+     * @param interfaceInfoInvokeRequest
+     * @param request
+     * @return
+     */
     @AuthCheck(mustRole = "admin")
     @PostMapping("/invoke")
     public BaseResponse<Object> invokeInterfaceInfo(@RequestBody InterfaceInfoInvokeRequest interfaceInfoInvokeRequest,
